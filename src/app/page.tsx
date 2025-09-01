@@ -185,7 +185,7 @@ export default function Home() {
           <AccordionGroup />
         </div>
       </section>
-      <section className="w-full h-full    py-20">
+      <section className="w-full h-full    py-20 mb-36">
         <div className="bg-[#001D36] w-[95%] h-[572px] mx-auto rounded-3xl ">
     <div className="w-full  grid grid-cols-1 lg:grid-cols-2 lg:container lg:mx-auto ">
           <div className="w-full -mt-12">
