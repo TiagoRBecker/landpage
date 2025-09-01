@@ -6,7 +6,7 @@ export default function AccordionGroup() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <div className="wfull  flex flex-col gap-7">
+    <div className="w-full  flex flex-col gap-7">
       {landContent.section_5.faq.map((item, index) => (
         <div key={index} className="border-[1px] border-gray-300 rounded-md overflow-hidden">
           <button

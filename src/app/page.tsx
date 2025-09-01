@@ -12,9 +12,9 @@ const rethinkSans = Rethink_Sans({
 });
 export default function Home() {
   return (
-    <main className="w-full h-full flex flex-col ">
+    <main className="w-full h-full flex flex-col  ">
       <header
-        className="w-full h- bg-cover bg-center pb-7 h-full lg:-screen"
+        className="w-full h- bg-cover bg-center pb-7 h-full  lg:-screen"
         style={{ backgroundImage: `url(${landContent.header.image})` }}
       >
         <div className="container mx-auto h-[100px]  flex items-center  ">
@@ -34,7 +34,7 @@ export default function Home() {
               {landContent.header.content}
             </p>
           </div>
-          <div className="w-[670px] h-[557px] mx-auto ">
+          <div className="w-full h-full lg:w-[670px] lg:h-[557px] mx-auto ">
             <form className="w-full h-full  flex flex-col gap-6 rounded-3xl items-center justify-center  bg-black/35 backdrop-blur-none p-10">
               <input
                 type="text"
@@ -63,10 +63,10 @@ export default function Home() {
           </div>
         </div>
       </header>
-      <section className="w-full h-full mt-10">
+      <section className="w-full h-full  ">
         <div className="container mx-auto flex items-center flex-col gap-10">
-          <div className="w-full flex items-center justify-between mt-36">
-            <h1 className="text-5xl max-w-[520px]">
+          <div className="w-full h-full  flex flex-col mt-36 items-center lg:flex-row lg:justify-between ">
+            <h1 className="w-full text-5xl lg:max-w-[520px]">
               {landContent.section_1.title}
             </h1>
             <button className="w-[295px] py-4 bg-[#3782FF] text-white rounded-md  ">
@@ -86,14 +86,14 @@ export default function Home() {
             ></video>
           </div>
         </div>
-        <div className="w-full h-screen bg-[#001D36] -mt-36 mb-26">
+        <div className="w-full h-full pb-10  bg-[#001D36] -mt-36 py-10">
           <div className="container mx-auto flex items-center flex-col gap-10 mt-36">
             <div className="w-full flex items-center justify-items-start">
               <h1 className="text-white text-5xl text-left pt-35 pb-10  w-[590px]  ">
                 {landContent.section_2.title}
               </h1>
             </div>
-            <div className="w-full grid grid-cols-4 gap-4">
+            <div className="w-full gap-4 grid grid-cols-1  md:grid-cols-2 lg:grid-cols-4 ">
               {landContent.section_2.grid.map((grid, index) => (
                 <div
                   className="w-full h-full flex flex-col gap-6 bg-[#002444] p-8 text-white rounded-3xl"
@@ -115,7 +115,7 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <div className="w-full flex items-start justify-between mt-10 gap-6">
+            <div className="w-full flex flex-col mt-10 gap-6 items-center justify-center lg:flex-row lg:justify-between ">
               <h1
                 className={` text-lg w-full  text-white ${rethinkSans.className}`}
               >
@@ -129,11 +129,11 @@ export default function Home() {
         </div>
       </section>
       <section
-        className="w-full h-[830px] bg-cover bg-center flex flex-col items-center justify-center"
+        className="w-full  h-full  bg-cover bg-center flex flex-col items-center justify-center lg:h-[830px]"
         style={{ backgroundImage: `url(${landContent.section_3.image})` }}
       >
         <div className="container flex flex-col gap-10">
-          <h2 className="text-white text-6xl max-w-[1000px]">
+          <h2 className="text-white text-6xl -w-full  lg:max-w-[1000px]">
             {landContent.section_3.title}
           </h2>
           <button className="w-[450px] py-4 bg-[#3782FF] text-white ">
@@ -141,10 +141,10 @@ export default function Home() {
           </button>
         </div>
       </section>
-      <section className="w-full h-screen flex flex-col items-center justify-center p-10 ">
-        <div className="w-full  mx-auto h-[800px] flex flex-col items-center justify-center gap-20 bg-[#3782FF]">
+      <section className="w-full h-full  flex flex-col items-center justify-center p-10    ">
+        <div className="w-full  h-full py-10 mx-auto  flex flex-col items-center justify-center gap-20 bg-[#3782FF] lg:h-[800px]">
           <h1 className="text-white text-5xl">{landContent.section_4.title}</h1>
-          <div className="w-full  gap-6 grid grid-cols-5 px-10">
+          <div className="w-full  px-10 gap-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 ">
             {landContent.section_4.news.map((news, index) => (
               <div
                 className="w-full bg-white  h-[492px] flex flex-col items-center justify-center gap-7  p-8 text-white rounded-3xl"
@@ -171,13 +171,13 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="w-full h-full flex flex-col mb-36">
+      <section className="w-full h-full  flex flex-col py-10">
         <div className="container mx-auto flex flex-col gap-10">
-          <div className="w-full flex items-center gap-4">
-            <h2 className="text-8xl text-[#001D36]">
+          <div className="w-full flex items-center justify-center gap-4">
+            <h2 className="text-3xl text-center text-[#001D36] lg:text-8xl ">
               {landContent.section_5.title}
             </h2>
-            <h2 className="text-5xl   text-[#001D36]">
+            <h2 className="text-2xl text-center text-[#001D36] lg:text-5xl   ">
               {landContent.section_5.subTitle}
             </h2>
           </div>
@@ -185,8 +185,9 @@ export default function Home() {
           <AccordionGroup />
         </div>
       </section>
-      <section className="w-[95%] bg-[#001D36] h-[572px] mx-auto rounded-3xl mb-36">
-        <div className="container mx-auto grid grid-cols-2 ">
+      <section className="w-full h-full    py-20">
+        <div className="bg-[#001D36] w-[95%] h-[572px] mx-auto rounded-3xl ">
+    <div className="w-full  grid grid-cols-1 lg:grid-cols-2 lg:container lg:mx-auto ">
           <div className="w-full -mt-12">
             <Image
               src={landContent.section_6.image}
@@ -213,6 +214,8 @@ export default function Home() {
             </Link>
           </div>
         </div>
+        </div>
+    
       </section>
       <footer className="w-full h-[409px] bg-[#D9D9D9] flex flex-col items-center justify-center">
         <div className="container mx-auto grid grid-cols-4 gap-10">
