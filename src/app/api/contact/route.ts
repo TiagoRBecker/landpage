@@ -4,8 +4,7 @@ export async function POST(req: Request) {
   try {
     const body = await req.json();
     const { name, email, phone, course } = body;
-    console.log(process.env.EMAIL_USER)
-        console.log(process.env.EMAIL_PASS)
+
 
     const transporter = nodemailer.createTransport({
       host: "smtp.hostinger.com",
