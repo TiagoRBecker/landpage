@@ -235,7 +235,7 @@ export default function Home() {
        <hr className="container mx-auto h-[1px] bg-[#2E3034] border-0 mt-10" />
        <div className="container mx-auto flex items-center justify-between">
         <p> Todos os Direitos Reservados &copy; 2025</p>
-         <p>Guedes Bampo Advogados</p>
+         <p>Guedes Bampi Advogados</p>
        </div>
       </footer>
     </main>
