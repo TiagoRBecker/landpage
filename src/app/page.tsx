@@ -6,7 +6,7 @@ import { Rethink_Sans } from "next/font/google";
 
 const rethinkSans = Rethink_Sans({
   subsets: ["latin"],
-  weight: ["400","700"], // escolha as weights que precisar
+  weight: ["400", "700"], // escolha as weights que precisar
   variable: "--font-rethink-sans",
   display: "swap",
 });
@@ -14,25 +14,27 @@ export default function Home() {
   return (
     <main className="w-full h-full flex flex-col ">
       <header
-        className="w-full h-screen bg-cover bg-center"
+        className="w-full h- bg-cover bg-center pb-7 h-full lg:-screen"
         style={{ backgroundImage: `url(${landContent.header.image})` }}
       >
         <div className="container mx-auto h-[100px]  flex items-center  ">
           <Image src={landContent.logo} alt="" width={250} height={101} />
         </div>
-        <div className="container mt-36  mx-auto grid grid-cols-2">
-          <div className="w-full flex flex-col gap-6 ">
+        <div className="container grid grid-cols-1   mt-36  mx-auto gap-6  lg:grid-cols-2">
+          <div className="w-full flex  gap-6 flex-col items-center justify-center lg:items-start">
             <h2 className="text-white font-semibold text-6xl max-w-[500px]">
               {landContent.header.title}
             </h2>
-            <p className="w-[321px] h-[30px] text-white bg-white/35 backdrop-blur-none  flex items-center justify-center rounded-md ">
+            <p className="w-[326px] h-[30px] text-white bg-white/35 backdrop-blur-none  flex items-center justify-center rounded-md ">
               Consulte seus direitos e busque justiça
             </p>
-            <p className={`text-white text-xl max-w-[500px] ${rethinkSans.className}`}>
+            <p
+              className={`text-white text-xl max-w-[500px] ${rethinkSans.className}`}
+            >
               {landContent.header.content}
             </p>
           </div>
-          <div className="w-[670px] h-[557px] ">
+          <div className="w-[670px] h-[557px] mx-auto ">
             <form className="w-full h-full  flex flex-col gap-6 rounded-3xl items-center justify-center  bg-black/35 backdrop-blur-none p-10">
               <input
                 type="text"
@@ -84,10 +86,10 @@ export default function Home() {
             ></video>
           </div>
         </div>
-        <div className="w-full h-screen bg-[#001D36] mb-26">
+        <div className="w-full h-screen bg-[#001D36] -mt-36 mb-26">
           <div className="container mx-auto flex items-center flex-col gap-10 mt-36">
             <div className="w-full flex items-center justify-items-start">
-              <h1 className="text-white text-5xl text-left  w-[505px]  ">
+              <h1 className="text-white text-5xl text-left pt-35 pb-10  w-[590px]  ">
                 {landContent.section_2.title}
               </h1>
             </div>
@@ -107,12 +109,16 @@ export default function Home() {
                   <h2 className="text-[20px] max-w-[270px] h-[45px]">
                     {grid.title}
                   </h2>
-                  <p className={`text-sm  ${rethinkSans.className}`}>{grid.content}</p>
+                  <p className={`text-sm  ${rethinkSans.className}`}>
+                    {grid.content}
+                  </p>
                 </div>
               ))}
             </div>
             <div className="w-full flex items-start justify-between mt-10 gap-6">
-              <h1 className={` text-lg w-full  text-white ${rethinkSans.className}`}>
+              <h1
+                className={` text-lg w-full  text-white ${rethinkSans.className}`}
+              >
                 {landContent.section_2.content}
               </h1>
               <button className="w-[295px] py-4 bg-[#3782FF] text-white rounded-md  ">
@@ -196,8 +202,10 @@ export default function Home() {
             <h2 className="text-5xl text-white">
               {landContent.section_6.title}
             </h2>
-           
-            <p className= {` text-[#F8F8F8] text-white ${rethinkSans.className}`}>{landContent.section_6.content}</p>
+
+            <p className={`  text-white ${rethinkSans.className}`}>
+              {landContent.section_6.content}
+            </p>
             <Link href={"https://guedes-news.vercel.app/"} target="_blank">
               <button className="w-[295px] py-4 bg-[#3782FF] text-white rounded-md cursor-pointer  ">
                 {landContent.btnsText.redirect}
@@ -223,20 +231,20 @@ export default function Home() {
           </div>
           <div className="flex flex-col gap-4 text-[#072E4E]">
             <h2 className="text-[#707070] uppercase">Siga nossas redes</h2>
-               <div className="w-full flex items-center gap-2">
-            {landContent.footer.socialIcons.map((icons, index) => (
-              <div className="w-[50px] " key={index}>
-                <Image src={icons} alt="" width={25} height={25} />
-              </div>
-            ))}
+            <div className="w-full flex items-center gap-2">
+              {landContent.footer.socialIcons.map((icons, index) => (
+                <div className="w-[50px] " key={index}>
+                  <Image src={icons} alt="" width={25} height={25} />
+                </div>
+              ))}
             </div>
           </div>
         </div>
-       <hr className="container mx-auto h-[1px] bg-[#2E3034] border-0 mt-10" />
-       <div className="container mx-auto flex items-center justify-between mt-10">
-        <p> Todos os Direitos Reservados &copy; 2025</p>
-         <p>Guedes Bampi Advogados</p>
-       </div>
+        <hr className="container mx-auto h-[1px] bg-[#2E3034] border-0 mt-10" />
+        <div className="container mx-auto flex items-center justify-between mt-10">
+          <p> Todos os Direitos Reservados &copy; 2025</p>
+          <p>Guedes Bampi Advogados</p>
+        </div>
       </footer>
     </main>
   );
