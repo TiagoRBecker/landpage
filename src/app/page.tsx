@@ -3,6 +3,7 @@ import { landContent } from "@/components/mocks";
 import Link from "next/link";
 import AccordionGroup from "@/components/accordion";
 import { Rethink_Sans } from "next/font/google";
+import Contact from "@/components/contact";
 
 const rethinkSans = Rethink_Sans({
   subsets: ["latin"],
@@ -22,9 +23,9 @@ export default function Home() {
         </div>
         <div className="container grid grid-cols-1   mt-36  mx-auto gap-6  lg:grid-cols-2">
           <div className="w-full flex  gap-6 flex-col items-center justify-center lg:items-start">
-            <h2 className="text-white font-semibold text-6xl max-w-[500px]">
+            <h1 className="text-white font-semibold text-6xl max-w-[500px]">
               {landContent.header.title}
-            </h2>
+            </h1>
             <p className="w-[326px] h-[30px] text-white bg-white/35 backdrop-blur-none  flex items-center justify-center rounded-md ">
               Consulte seus direitos e busque justiça
             </p>
@@ -35,41 +36,17 @@ export default function Home() {
             </p>
           </div>
           <div className="w-full h-full lg:w-[670px] lg:h-[557px] mx-auto ">
-            <form className="w-full h-full  flex flex-col gap-6 rounded-3xl items-center justify-center  bg-black/35 backdrop-blur-none p-10">
-              <input
-                type="text"
-                className="outline-none bg-white text-black w-full rounded-md h-[50px] pl-5"
-                placeholder="Nome"
-              />
-              <input
-                type="text"
-                className="outline-none bg-white text-black w-full rounded-md h-[50px] pl-5"
-                placeholder="Email"
-              />
-              <input
-                type="text"
-                className="outline-none bg-white text-black w-full rounded-md h-[50px] pl-5"
-                placeholder="Telefone"
-              />
-              <input
-                type="text"
-                className="outline-none bg-white text-black w-full rounded-md h-[50px] pl-5 "
-                placeholder="O que está cursando?"
-              />
-              <button className="w-full py-4 bg-[#3782FF] text-white ">
-                {landContent.btnsText.specialist}
-              </button>
-            </form>
+           <Contact/>
           </div>
         </div>
       </header>
       <section className="w-full h-full  ">
         <div className="container mx-auto flex items-center flex-col gap-10">
           <div className="w-full h-full  flex flex-col mt-36 items-center lg:flex-row lg:justify-between ">
-            <h1 className="w-full text-5xl lg:max-w-[520px]">
+            <h2 className="w-full text-5xl lg:max-w-[520px]">
               {landContent.section_1.title}
-            </h1>
-            <button className="w-[295px] py-4 bg-[#3782FF] text-white rounded-md  ">
+            </h2>
+            <button className="w-[295px] py-4 bg-bgBtn text-white rounded-md  ">
               {landContent.btnsText.contact}
             </button>
           </div>
@@ -86,7 +63,7 @@ export default function Home() {
             ></video>
           </div>
         </div>
-        <div className="w-full h-full pb-10  bg-[#001D36] -mt-36 py-10">
+        <div className="w-full h-full pb-10  bg-bgSection -mt-36 py-10">
           <div className="container mx-auto flex items-center flex-col gap-10 mt-36">
             <div className="w-full flex items-center justify-items-start">
               <h1 className="text-white text-5xl text-left pt-35 pb-10  w-[590px]  ">
@@ -121,7 +98,7 @@ export default function Home() {
               >
                 {landContent.section_2.content}
               </h1>
-              <button className="w-[295px] py-4 bg-[#3782FF] text-white rounded-md  ">
+              <button className="w-[295px] py-4 bg-bgBtn text-white rounded-md  ">
                 {landContent.btnsText.contact}
               </button>
             </div>
@@ -136,14 +113,14 @@ export default function Home() {
           <h2 className="text-white text-6xl -w-full  lg:max-w-[1000px]">
             {landContent.section_3.title}
           </h2>
-          <button className="w-[450px] py-4 bg-[#3782FF] text-white ">
+          <button className="w-[450px] py-4 bg-bgBtn text-white ">
             {landContent.btnsText.specialist}
           </button>
         </div>
       </section>
       <section className="w-full h-full  flex flex-col items-center justify-center p-10    ">
-        <div className="w-full  h-full py-10 mx-auto  flex flex-col items-center justify-center gap-20 bg-[#3782FF] lg:h-[800px]">
-          <h1 className="text-white text-5xl">{landContent.section_4.title}</h1>
+        <div className="w-full  h-full py-10 mx-auto  flex flex-col items-center justify-center gap-20 bg-bgBtn lg:h-[800px]">
+          <h2 className="text-white text-5xl">{landContent.section_4.title}</h2>
           <div className="w-full  px-10 gap-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 ">
             {landContent.section_4.news.map((news, index) => (
               <div
@@ -186,7 +163,7 @@ export default function Home() {
         </div>
       </section>
       <section className="w-full h-full    py-20 mb-36">
-        <div className="bg-[#001D36] w-[95%] h-[572px] mx-auto rounded-3xl ">
+        <div className="bg-bgSection w-[95%] h-[572px] mx-auto rounded-3xl ">
     <div className="w-full  grid grid-cols-1 lg:grid-cols-2 lg:container lg:mx-auto ">
           <div className="w-full -mt-12">
             <Image
@@ -208,7 +185,7 @@ export default function Home() {
               {landContent.section_6.content}
             </p>
             <Link href={"https://guedes-news.vercel.app/"} target="_blank">
-              <button className="w-[295px] py-4 bg-[#3782FF] text-white rounded-md cursor-pointer  ">
+              <button className="w-[295px] py-4 bg-bgBtn text-white rounded-md cursor-pointer  ">
                 {landContent.btnsText.redirect}
               </button>
             </Link>
